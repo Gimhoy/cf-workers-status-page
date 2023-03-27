@@ -23,3 +23,30 @@ monitors:
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
+    
+  - id: link-jscdn # unique identifier
+    name: link.jscdn.cn
+    description: '' # default=empty
+    url: 'https://link.jscdn.cn/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 301 # operational status, default=200
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+    
+  - id: cf-slb-jscdn # unique identifier
+    name: cf-slb.jscdn.cn
+    description: '' # default=empty
+    url: 'https://cf-slb.jscdn.cn/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 301 # operational status, default=200
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+    
+- id: sp-slb-jscdn # unique identifier
+    name: sp-slb.jscdn.cn
+    description: '' # default=empty
+    url: 'https://sp-slb.jscdn.cn/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 301 # operational status, default=200
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
