@@ -42,7 +42,7 @@ monitors:
     followRedirect: true # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
     
-- id: sp-slb-jscdn # unique identifier
+  - id: sp-slb-jscdn # unique identifier
     name: sp-slb.jscdn.cn
     description: '' # default=empty
     url: 'https://sp-slb.jscdn.cn/' # URL to fetch
