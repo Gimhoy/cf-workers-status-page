@@ -1,6 +1,6 @@
 settings:
   title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  url: 'https://status.globalcdn.workers.dev' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
@@ -15,25 +15,36 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: link-gimhoy # unique identifier
+    name: link.gimhoy.com
+    description: '' # default=empty
+    url: 'https://link.gimhoy.com/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
+    
+  - id: link-jscdn # unique identifier
+    name: link.jscdn.cn
+    description: '' # default=empty
+    url: 'https://link.jscdn.cn/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 301 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: cf-slb-link
+    name:cf-slb.jscdn.cn
+    description: ''
+    url: 'https://cf-slb.jscdn.cn'
     method: GET
-    expectStatus: 200
+    expectStatus: 310
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: sp-slb-link
+    name:sp-slb.jscdn.cn
+    description: ''
+    url: 'https://sp-slb.jscdn.cn'
     method: GET
-    expectStatus: 200
+    expectStatus: 310
+    linkable: true # allows the title to be a link, default=true
