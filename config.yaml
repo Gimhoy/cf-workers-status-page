@@ -39,7 +39,7 @@ monitors:
     url: 'https://link.jscdn.cn/' # URL to fetch
     method: GET # default=GET
     expectStatus: 301 # operational status, default=200
-    followRedirect: true # should fetch follow redirects, default=false
+    followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
     
   - id: cf-slb-jscdn # unique identifier
@@ -48,7 +48,7 @@ monitors:
     url: 'https://cf-slb.jscdn.cn/' # URL to fetch
     method: GET # default=GET
     expectStatus: 301 # operational status, default=200
-    followRedirect: true # should fetch follow redirects, default=false
+    followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
     
   - id: sp-slb-jscdn # unique identifier
@@ -57,5 +57,5 @@ monitors:
     url: 'https://sp-slb.jscdn.cn/' # URL to fetch
     method: GET # default=GET
     expectStatus: 301 # operational status, default=200
-    followRedirect: true # should fetch follow redirects, default=false
+    followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
