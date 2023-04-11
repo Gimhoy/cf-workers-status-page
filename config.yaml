@@ -47,7 +47,7 @@ monitors:
     description: '' # default=empty
     url: 'https://cf-slb.jscdn.cn/' # URL to fetch
     method: GET # default=GET
-    expectStatus: 301 # operational status, default=200
+    expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
     
@@ -56,6 +56,15 @@ monitors:
     description: '' # default=empty
     url: 'https://sp-slb.jscdn.cn/' # URL to fetch
     method: GET # default=GET
-    expectStatus: 301 # operational status, default=200
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+    
+  - id: gd-workers # unique identifier
+    name: link.googledrv.workers.dev
+    description: '' # default=empty
+    url: 'https://link.googledrv.workers.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
