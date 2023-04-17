@@ -60,6 +60,15 @@ monitors:
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
     
+  - id: pg-slb-jscdn # unique identifier
+    name: pg-slb.jscdn.cn
+    description: '' # default=empty
+    url: 'https://pg-slb.jscdn.cn/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+    
   - id: gd-workers # unique identifier
     name: link.googledrv.workers.dev
     description: '' # default=empty
